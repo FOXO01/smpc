@@ -61,8 +61,9 @@ export const generateSetup = async (request: SetupRequest): Promise<SetupRespons
       }));
 
     return { text, sources };
-  } catch (error) {
-    console.error("Gemini Error:", error);
-    throw new Error(request.language === 'ar' ? "بيانات السوق غير متوفرة حالياً. يرجى المحاولة لاحقاً." : "Market data unavailable. Please verify budget and try again.");
-  }
+  } catch (error: any) {
+  console.error("Gemini Error FULL:", error);
+  throw error; // مؤقتًا فقط للتشخيص
+}
+
 };
