@@ -1,0 +1,6 @@
+
+{
+  "name": "SM PC",
+  "description": "An intelligent assistant that generates complete, compatible PC and office setups based on budget and preferences using real-time search grounding for current pricing and availability.",
+  "requestFramePermissions": []
+}
